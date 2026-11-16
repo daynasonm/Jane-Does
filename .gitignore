@@ -1,0 +1,6 @@
+.DS_Store
+.env*
+.openai/
+node_modules/
+reference-wiki/
+process-images/

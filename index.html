@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head><meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self'; img-src 'self' data: blob:; font-src 'self' data:; media-src 'self' blob: data:; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'none'; frame-src 'none'">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jane Doe(s)</title>
+<meta name="description" content="Everyday objects, extraordinary stories. A collection of symbolic objects representing Jane Doe cases.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='white'/%3E%3Ctext x='9' y='44' font-family='Helvetica' font-size='35'%3EJD%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css?v=fc4578fcd087"><script src="app.js?v=c0d3882f35b3" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to collection</a>
+<header>
+<nav class="left-nav" aria-label="Collection navigation"><button id="all" class="pill" aria-expanded="false" aria-controls="filters">All <span class="tiny-plus">+</span></button><button id="search-toggle" class="pill" aria-expanded="false" aria-controls="search-panel">Search</button></nav>
+<nav class="sector-tabs" aria-label="Public or private cases"><button id="public-tab" data-sector="Public" aria-pressed="true">PUBLIC</button><button id="private-tab" data-sector="Private" aria-pressed="false">PRIVATE</button></nav>
+<button id="bag" class="pill bag" aria-label="Open bookmarks, 0 objects"><svg width="14" height="16" viewBox="0 0 16 18" fill="none" aria-hidden="true"><path d="M3 1.5h10v15l-5-3.5-5 3.5v-15Z" stroke="currentColor" stroke-linejoin="round"/></svg><span id="bag-count">0</span></button>
+</header>
+<section id="filters" class="toolbar" hidden aria-label="Filter objects by year"></section>
+<form id="search-panel" class="toolbar search-panel" hidden role="search"><label class="sr-only" for="search">Search objects and stories</label><input id="search" type="search" placeholder="Search objects, cases, stories…" autocomplete="off"><button type="button" id="clear-search" class="text-button">Clear</button><button type="button" id="close-search" class="text-button" aria-label="Close search">×</button></form>
+<main id="main" tabindex="-1"><div class="collection-meta"><span id="collection-label">All objects <span class="meta-slash">/</span> <span id="total">65</span></span><button id="sort" class="text-button" aria-label="Change sort order">Sort <span aria-hidden="true">↕</span></button></div><section id="grid" aria-label="Public case objects"></section><p id="empty" hidden>No objects found. Try another word or select All.</p><section id="detail" hidden aria-label="Object details"></section><section id="checkout" hidden aria-label="Case summary checkout"></section></main>
+<footer><div id="density-control"><label for="density">View</label><input id="density" type="range" min="3" max="6" value="4" aria-label="Objects per row"><output id="density-value" for="density">4</output></div><span class="footer-copyright">© 2026 All rights reserved.</span><button class="text-button" id="footer-about">About the collection ↗</button></footer>
+
+<dialog id="info-dialog" aria-labelledby="info-title"><button class="dialog-close text-button" data-close="info-dialog" aria-label="Close about">Close ×</button><h1 id="info-title" class="sr-only">About the collection</h1><p class="about-copy">Jane Doe is a name used to protect an identity. This collection approaches those hidden lives through everyday things: a key, a wristband, a school&nbsp;bag.</p><p>Each object represents a case. Select one to read the story behind&nbsp;it.</p><p><strong>Public</strong> — cases involving government bodies, public schools and public&nbsp;universities.<br><strong>Private</strong> — cases involving private employers, insurers, organizations and&nbsp;individuals.</p><p class="muted small">Symbolic objects, not case evidence. Sources are credited; allegations are not&nbsp;findings.</p><p class="muted small">Explore and bookmark. Nothing is for&nbsp;sale.</p></dialog>
+<dialog id="bag-dialog" aria-labelledby="bag-title"><button class="dialog-close text-button" data-close="bag-dialog" aria-label="Close bookmarks">Close ×</button><h1 id="bag-title">Bookmarked <span id="bag-title-count">(0)</span></h1><div id="bag-items"></div><a id="bag-checkout" class="add-button" href="#checkout" data-bag-link hidden>Checkout ↗</a><p class="muted small bag-note">An exhibition collection. Objects are representations and are not available for purchase.</p></dialog>
+<div id="toast" role="status" aria-live="polite"></div>
+</body></html>
